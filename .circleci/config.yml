@@ -41,7 +41,7 @@ jobs:
             export CCACHE_DIR=~/ccache
             export USE_CCACHE=1
             export CCACHE_EXEC=/usr/bin/ccache
-            ccache -M 30G
+            ccache -M 40G
             df -H
       - run:
           name: Start ROM Build
@@ -50,7 +50,7 @@ jobs:
             source build/envsetup.sh
             lunch evolution_kelly-eng
             croot
-            mka bootimage -j10
+            mka bootimage -j8
             echo $CIRCLE_BUILD_NUM
       - run:
           name: Upload To GitHub
