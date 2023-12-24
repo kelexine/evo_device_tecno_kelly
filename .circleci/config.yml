@@ -48,8 +48,8 @@ jobs:
           command: |
             cd ~/android/evolution
             source build/envsetup.sh
-            lunch evolution_kelly-userdebug
-            mka clean
+            lunch evolution_kelly-eng
+            croot
             mka bootimage -j10
             echo $CIRCLE_BUILD_NUM
       - run:
