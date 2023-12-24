@@ -41,7 +41,7 @@ jobs:
             export CCACHE_DIR=~/ccache
             export USE_CCACHE=1
             export CCACHE_EXEC=/usr/bin/ccache
-            ccache -M 40G
+            ccache -M 20G
             df -H
       - run:
           name: Start ROM Build
